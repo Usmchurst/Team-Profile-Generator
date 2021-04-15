@@ -37,6 +37,8 @@ const managerQuestions = () => {
                 break;
             case 'Intern':
                 internQuestions();
+                break;
+            default:
         }
     })
 };
@@ -71,7 +73,15 @@ const engineerQuestions = () => {
         }
     ])
     .then((engineer) => {
-        console.log(engineer)
+        switch(engineer.addMember) {
+            case 'Engineer':
+                engineerQuestions();
+                break;
+            case 'Intern':
+                internQuestions();
+                break;
+            default:
+        }
     })
 };
 
@@ -104,6 +114,17 @@ const internQuestions = () => {
             choices: ['Engineer', 'Intern', 'I don\'t want to add any more team members'],
         }
     ])
+    .then((intern) => {
+        switch(intern.addMember){
+            case 'Engineer':
+                engineerQuestions();
+                break;
+            case 'Intern':
+                internQuestions();
+                break;
+            default:
+        }
+    })
 }
 
 managerQuestions();
