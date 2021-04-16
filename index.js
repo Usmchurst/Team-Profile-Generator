@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer')
 const fs = require('fs');
 
 
@@ -81,7 +82,7 @@ const engineerQuestions = () => {
     ])
     .then((engineerAnswers) => {
         console.log(engineerAnswers)
-        const engineer = new Engineer(engineerAnswers.engineerName, engineerAnswers.engineerID, engineerAnswers.engineerEmail, engineerAnswers.Github)
+        const engineer = new Engineer(engineerAnswers.engineerName, engineerAnswers.engineerID, engineerAnswers.engineerEmail, engineerAnswers.engineerGithub)
         team.push(engineer)
         console.log(engineer)
         switch(engineerAnswers.addMember) {
