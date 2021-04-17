@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer')
 const fs = require('fs');
+const generateTeam = require('./src/generateTeam');
 
 
 team = [];
@@ -143,4 +144,10 @@ const internQuestions = () => {
     })
 }
 
-managerQuestions();
+function writeToFile(filename, data) {
+    fs.writeFile(filename, data, (err) => {
+        if(err) throw err;
+        console.log('file saved')
+    });
+};
+
