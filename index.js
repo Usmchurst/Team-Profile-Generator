@@ -37,7 +37,7 @@ const managerQuestions = () => {
         }
     ])
     .then((managerAnswers) => {
-        console.log(managerAnswers)
+    
         const manager = new Manager(managerAnswers.id, managerAnswers.name, managerAnswers.email, managerAnswers.officeNumber)
         team.push(manager)
         switch(managerAnswers.addMember) {
@@ -50,23 +50,7 @@ const managerQuestions = () => {
             default: 
             writeToFile('dist/index.html', generateTeam(team))
         }
-        function generateCard(){
-            for(let i = 0; i < team.length; i++){
-                const teamArray = team[i]
-                switch(teamArray.role){
-                    case 'Manager': 
-                    cards.push(manager.generateCard())
-                    break;
-                    case 'Engineer': 
-                    cards.push(engineer.generateCard())
-                    break;
-                    case 'Intern': 
-                    cards.push(intern.generateCard())
-                    break;
-                }
-            }
-        }
-    })
+    });
 };
 
 const engineerQuestions = () => {
@@ -99,7 +83,6 @@ const engineerQuestions = () => {
         }
     ])
     .then((engineerAnswers) => {
-        console.log(engineerAnswers)
         const engineer = new Engineer(engineerAnswers.name, engineerAnswers.id, engineerAnswers.email, engineerAnswers.github)
         team.push(engineer)
         switch(engineerAnswers.addMember) {
@@ -145,10 +128,8 @@ const internQuestions = () => {
         }
     ])
     .then((internAnswers) => {
-        console.log(internAnswers)
         const intern = new Intern(internAnswers.name, internAnswers.id, internAnswers.email, internAnswers.school)
         team.push(intern)
-        console.log(intern)
         switch(internAnswers.addMember){
             case 'Engineer':
                 engineerQuestions();
