@@ -23,16 +23,16 @@ To begin, as a developer, think about how the user will interact with the Team P
 
 Picture of example HTML file:
 
-<img src ='' alt='Picture of example HTML file with team roster displayed'>
+<img src ='images\team-generator.PNG' alt='Picture of example HTML file with team roster displayed'>
 
 Click the image below to watch a video demonstration:
 
-[![Video Demonstration]()]()
+[![Video Demonstration](https://img.youtube.com/vi/AN2tbpBgTF0/0.jpg)](https://www.youtube.com/watch?v=AN2tbpBgTF0)
 
 ## Test
 As a developer in order to ensure your application functions correctly. You will create test for each JavaScript file. 
 Click the image below to watch a video demonstration of the testing the files:
- [![Video Demonstration]()]()
+ [![Video Demonstration](https://img.youtube.com/vi/HCfJ2xHaP20/0.jpg)](https://www.youtube.com/watch?v=HCfJ2xHaP20)
 
 ## License
 MIT License
