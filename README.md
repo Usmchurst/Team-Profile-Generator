@@ -21,7 +21,38 @@ To begin, as a developer, think about how the user will interact with the Team P
     3. Once the user has added all members desired and selected 'Done' as their option. The user's input will be added to specific sections of the HTML.
     4. The HTML file will be stored in a folder. When user opens the HTML file, it will display a nicely formatted team roster with contact information based on their input.
 
-    Picture of example HTML file:
-    <img src ='' alt='Picture of example HTML file with team roster displayed'>
-    Click the image below to watch a video demonstration:
-    [![Video Demonstration](
+Picture of example HTML file:
+
+<img src ='' alt='Picture of example HTML file with team roster displayed'>
+
+Click the image below to watch a video demonstration:
+
+[![Video Demonstration]()]()
+
+## Test
+As a developer in order to ensure your application functions correctly. You will create test for each JavaScript file. 
+Click the image below to watch a video demonstration of the testing the files:
+ [![Video Demonstration]()]()
+
+## License
+MIT License
+
+Copyright (c) [2021] [Amanda Rodriguez]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
