@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer')
+const Intern = require('./lib/Intern')
 const fs = require('fs');
 const generateTeam = require('./src/generateTeam');
 
@@ -39,7 +40,6 @@ const managerQuestions = () => {
         console.log(managerAnswers)
         const manager = new Manager(managerAnswers.id, managerAnswers.name, managerAnswers.email, managerAnswers.officeNumber)
         team.push(manager)
-        console.log(manager)
         switch(managerAnswers.addMember) {
             case 'Engineer':
                 engineerQuestions();
@@ -47,7 +47,24 @@ const managerQuestions = () => {
             case 'Intern':
                 internQuestions();
                 break;
-            default:
+            default: 
+            writeToFile('dist/index.html', generateTeam(team))
+        }
+        function generateCard(){
+            for(let i = 0; i < team.length; i++){
+                const teamArray = team[i]
+                switch(teamArray.role){
+                    case 'Manager': 
+                    cards.push(manager.generateCard())
+                    break;
+                    case 'Engineer': 
+                    cards.push(engineer.generateCard())
+                    break;
+                    case 'Intern': 
+                    cards.push(intern.generateCard())
+                    break;
+                }
+            }
         }
     })
 };
@@ -56,22 +73,22 @@ const engineerQuestions = () => {
     inquirer.prompt([
         {
             type: 'input',
-            name: 'engineerName',
+            name: 'name',
             message: 'What is the engineer\'s name?',
         },
         {
             type: 'input',
-            name: 'engineerID',
+            name: 'id',
             message: 'What is the engineer\'s id?',
         },
         {
             type: 'input',
-            name: 'engineerEmail',
+            name: 'email',
             message: 'What is the engineer\'s email address?',
         },
         {
             type: 'input',
-            name: 'engineerGithub',
+            name: 'github',
             message: 'What is the engineer\'s GitHub username?',
         },
         {
@@ -83,9 +100,8 @@ const engineerQuestions = () => {
     ])
     .then((engineerAnswers) => {
         console.log(engineerAnswers)
-        const engineer = new Engineer(engineerAnswers.engineerName, engineerAnswers.engineerID, engineerAnswers.engineerEmail, engineerAnswers.engineerGithub)
+        const engineer = new Engineer(engineerAnswers.name, engineerAnswers.id, engineerAnswers.email, engineerAnswers.github)
         team.push(engineer)
-        console.log(engineer)
         switch(engineerAnswers.addMember) {
             case 'Engineer':
                 engineerQuestions();
@@ -93,7 +109,8 @@ const engineerQuestions = () => {
             case 'Intern':
                 internQuestions();
                 break;
-            default:
+            default: 
+            writeToFile('dist/index.html', generateTeam(team))
         }
     })
 };
@@ -102,22 +119,22 @@ const internQuestions = () => {
     inquirer.prompt([
         {
             type: 'input',
-            name: 'internName',
+            name: 'name',
             message: 'What is the intern\'s name?'
         },
         {
             type: 'input',
-            name: 'internID',
+            name: 'id',
             message: 'What is the intern\'s id?'
         },
         {
             type: 'input',
-            name: 'internEmail',
+            name: 'email',
             message: 'What is the intern\'s email address?'
         },
         {
             type: 'input',
-            name: 'internSchool',
+            name: 'school',
             message: 'What is the intern\'s school?'
         },
         {
@@ -129,7 +146,7 @@ const internQuestions = () => {
     ])
     .then((internAnswers) => {
         console.log(internAnswers)
-        const intern = new Intern(internAnswers.internName, internAnswers.internID, internAnswers.internEmail, internAnswers.internSchool)
+        const intern = new Intern(internAnswers.name, internAnswers.id, internAnswers.email, internAnswers.school)
         team.push(intern)
         console.log(intern)
         switch(internAnswers.addMember){
@@ -140,9 +157,13 @@ const internQuestions = () => {
                 internQuestions();
                 break;
             default:
+                writeToFile('dist/index.html', generateTeam(team))
         }
     })
 }
+
+managerQuestions();
+
 
 function writeToFile(filename, data) {
     fs.writeFile(filename, data, (err) => {
@@ -150,4 +171,5 @@ function writeToFile(filename, data) {
         console.log('file saved')
     });
 };
+
 
