@@ -1,14 +1,15 @@
 # Team-Profile-Generator
 ## Description
-In this repository, the developer will create a Team Profile generator for a team manager to quickly create their team and easily access their team's contact information.
+The Team Profile Generator is a node command line interface that allows a manager to input information about each team member of their team. This will create a HTML webpage that will display a summary of each team member to easily access their team's contact information.
 
 ## Installation
-1. Create a folder on desktop to download repository to.
-2. Copy the link to repository from GitHub.
-3. Open Bash or Terminal Window.
-4. When the console opens, navigate to the folder create on desktop for repository. *Remember to use the command cd to change directories.*
-5. In the console, type the command <i> git clone </i> and paste the link to repository.
-6. Open repository in preferred coder editor.
+1. Copy the clone link of the repository from GitHub.
+2. Open Bash or Terminal Window.
+3. When the console opens, navigate to the directory the repository will be added to. *Remember to use the command cd to change directories.*
+4. In the console, type the command <i> git clone </i> and paste the link to repository.
+5. Open repository in preferred code editor.
+6. Open terminal in code editor.
+7. Type in terminal <i>npm i</i> or <i>npm install </i> to install dependency packages needed.
 
 *Ensure the following packages are installed. (To install packages, open the terminal in preferred coder editor and type npm install)*
 - Inquirer
@@ -36,7 +37,7 @@ Click the image below to watch a video demonstration of the testing the files:
 ## License
 MIT License
 
-Copyright (c) [2021] [Amanda Rodriguez]
+Copyright (c) 2021 Amanda Rodriguez
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
