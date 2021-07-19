@@ -11,7 +11,7 @@ The Team Profile Generator is a node command line interface that allows a manage
 6. Open terminal in code editor.
 7. Type in terminal <i>npm i</i> or <i>npm install </i> to install dependency packages needed.
 
-*Ensure the following packages are installed. *
+*Ensure the following packages are installed.*
 - Inquirer
 - Jest
 
@@ -30,7 +30,6 @@ Click the image below to watch a video demonstration:
 [![Video Demonstration](https://img.youtube.com/vi/AN2tbpBgTF0/0.jpg)](https://www.youtube.com/watch?v=AN2tbpBgTF0)
 
 ## Test
-As a developer in order to ensure your application functions correctly. You will create test for each JavaScript file. 
 Click the image below to watch a video demonstration of the testing the files:
  [![Video Demonstration](https://img.youtube.com/vi/HCfJ2xHaP20/0.jpg)](https://www.youtube.com/watch?v=HCfJ2xHaP20)
 
